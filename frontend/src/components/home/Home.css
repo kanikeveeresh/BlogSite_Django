@@ -1,0 +1,113 @@
+/* Navbar styles (same as before) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.left {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo{
+  color: #fff;
+  text-decoration: none;
+}
+
+.link {
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.no-post {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth-button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.username {
+  font-style: italic;
+}
+
+.posts-container {
+  padding: 1rem;
+}
+
+.posts-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 769px) {
+  .posts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 768px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.post-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.show-button {
+  margin-top: 0.5rem;
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.pagination {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
