@@ -24,12 +24,14 @@ class LoginView(APIView):
         password = request.data.get('password')
         if '@' in identifier:
             try:
-                user_obj = User.objects.get(email=identifier)
-                user = authenticate(username=user_obj.username, password=password)
+                user = User.objects.get(email=identifier)
+                username = user.username
             except User.DoesNotExist:
                 return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
         else:
-            user = authenticate(username=identifier, password=password)
+            username = identifier
+        
+        user = authenticate(username=username, password=password)
 
         if user:
             refresh = RefreshToken.for_user(user)
