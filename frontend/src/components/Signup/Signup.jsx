@@ -64,7 +64,7 @@ function Signup() {
         />
 
         <button type="submit">Signup</button>
-        <p>Already have an account? <Link to="/signup" style={{ textDecoration:'none' }}>Please LogIn</Link></p>
+        <p>Already have an account? <Link to="/login" style={{ textDecoration:'none' }}>Please LogIn</Link></p>
       </form>
     </div>
   );
