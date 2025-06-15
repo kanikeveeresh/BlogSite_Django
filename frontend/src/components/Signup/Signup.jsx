@@ -22,7 +22,7 @@ function Signup() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8000/api/register/', formData);
+      await axios.post('https://blogsiteapp-kjw2.onrender.com/api/register/', formData);
       alert('Signup successful. You can now login.');
       navigate('/login');
     } catch (err) {

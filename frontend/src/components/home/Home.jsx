@@ -15,7 +15,7 @@ const Home = () => {
   const username = localStorage.getItem('username');
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/posts/')
+    axios.get('https://blogsiteapp-kjw2.onrender.com/api/posts/')
       .then(res => setPosts(res.data))
       .catch(err => console.error("Failed to fetch posts", err));
 

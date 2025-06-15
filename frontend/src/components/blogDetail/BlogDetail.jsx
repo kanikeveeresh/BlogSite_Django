@@ -14,7 +14,7 @@ function BlogDetail() {
   const username = localStorage.getItem('username');
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/api/posts/${id}/`)
+    axios.get(`https://blogsiteapp-kjw2.onrender.com/api/posts/${id}/`)
       .then(res => {
         setPost(res.data);
         setEditableData({ title: res.data.title, content: res.data.content });
@@ -24,7 +24,7 @@ function BlogDetail() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:8000/api/posts/${id}/`, {
+      await axios.delete(`https://blogsiteapp-kjw2.onrender.com/api/posts/${id}/`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert("Post deleted");
@@ -36,7 +36,7 @@ function BlogDetail() {
 
   const handleSave = async () => {
     try {
-      const res = await axios.put(`http://localhost:8000/api/posts/${id}/`, editableData, {
+      const res = await axios.put(`https://blogsiteapp-kjw2.onrender.com/api/posts/${id}/`, editableData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setPost(res.data);

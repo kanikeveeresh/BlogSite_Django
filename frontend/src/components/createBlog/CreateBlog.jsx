@@ -28,7 +28,7 @@ const CreateBlog = () => {
 
     try {
       const res = await axios.post(
-        'http://localhost:8000/api/posts/',  // Change URL if your API route differs
+        'https://blogsiteapp-kjw2.onrender.com/api/posts/',  // Change URL if your API route differs
         {
           ...formData,
           author: username  // Pass the username to the backend

@@ -18,7 +18,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:8000/api/login/', formData);
+      const res = await axios.post('https://blogsiteapp-kjw2.onrender.com/api/login/', formData);
       localStorage.setItem('access', res.data.access);
       localStorage.setItem('refresh', res.data.refresh);
       localStorage.setItem('username', res.data.username);
