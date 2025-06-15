@@ -8,6 +8,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+ENV DJANGO_SETTINGS_MODULE=backend.backend.settings
+
+
 RUN python backend/manage.py migrate
 
 EXPOSE 8000
