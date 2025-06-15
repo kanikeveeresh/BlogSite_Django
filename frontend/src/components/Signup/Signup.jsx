@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import "./Signup.css"
 
 function Signup() {
@@ -64,7 +64,7 @@ function Signup() {
         />
 
         <button type="submit">Signup</button>
-        <p>Already have an account? <a href='login'style={{textDecoration: "none"}}>Please LogIn</a></p>
+        <p>Already have an account? <Link to="/signup" style={{ textDecoration:'none' }}>Please LogIn</Link></p>
       </form>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import "./Login.css";
 
@@ -52,7 +52,7 @@ function Login() {
           required
         />
         <button type="submit">Login</button>
-        <p>New User? <a href='signup'style={{textDecoration: "none"}}>Create an account</a></p>
+        <p>New User? <Link to="/signup" style={{ textDecoration:'none' }}>Create an account</Link></p>
       </form>
     </div>
   );
