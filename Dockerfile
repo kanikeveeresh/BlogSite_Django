@@ -11,7 +11,7 @@ COPY . .
 ENV DJANGO_SETTINGS_MODULE=backend.backend.settings.py
 
 
-RUN python backend/manage.py migrate
+RUN cd backend python manage.py migrate
 
 EXPOSE 8000
 
