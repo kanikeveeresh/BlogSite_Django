@@ -8,7 +8,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# ENV DJANGO_SETTINGS_MODULE=backend.backend.settings
+ENV DJANGO_SETTINGS_MODULE=backend.backend.settings.py
 
 
 RUN python backend/manage.py migrate
