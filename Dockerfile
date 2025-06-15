@@ -9,7 +9,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 RUN python backend/manage.py migrate
-RUN python backend/manage.py collectstatic --noinput
 
 EXPOSE 8000
 
