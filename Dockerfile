@@ -1,6 +1,6 @@
 FROM python:3.11-slim
 
-WORKDIR /BLOGSITE
+WORKDIR /backend
 
 COPY requirements.txt .
 
@@ -8,10 +8,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-ENV DJANGO_SETTINGS_MODULE="backend.backend.settings"
+ENV DJANGO_SETTINGS_MODULE="backend.settings"
 
 
-RUN cd backend python manage.py migrate
+RUN python manage.py migrate
 
 EXPOSE 8000
 
